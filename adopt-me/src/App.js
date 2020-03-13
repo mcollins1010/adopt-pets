@@ -1,6 +1,8 @@
 import React from "react";
 import { render } from "react-dom";
 import SearchParams from "./SearchParams";
+import { Router, Link } from "@reach/router";
+import Details from "./Details";
 
 //first component(App) which ret a markup
 const App = () => {
@@ -9,8 +11,14 @@ const App = () => {
   return (
     <React.StrictMode>
       <div>
-        <h1 id="something-important"> Adop Me</h1>
-        <SearchParams />
+        <header>
+          <Link to="/">Adop Me</Link>
+        </header>
+
+        <Router>
+          <SearchParams path="/" />
+          <Details path="/details/:id" />
+        </Router>
       </div>
     </React.StrictMode>
   );
