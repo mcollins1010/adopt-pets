@@ -2,14 +2,7 @@ import React from "react";
 import pet from "@frontendmasters/pet";
 
 class Details extends React.Component {
-  constructor(props) {
-    super(props);
-
-    //only withing the class,serves as hooks
-    this.state = {
-      loading: true
-    };
-  }
+  state = { loading: true };
 
   componentDidMount() {
     pet
